@@ -3,7 +3,7 @@ DigiApi::Application.routes.draw do
     get '/products', to: "products#index"
     get '/product/:id', to: "products#show"
     get '/carts', to: "carts#index"
-    get '/cart/:id', to: "carts#show"
+    get '/carts/:id', to: "carts#show"
     get '/items', to: "items#index"
     get '/item/:id', to: "items#show"
     get '/orders', to: "orders#index"
