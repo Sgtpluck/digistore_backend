@@ -4,15 +4,9 @@ class CartsController < ApplicationController
   end
 
   def create
-    @cart = Cart.new(cart_params)
+    @cart = Cart.new
     if @cart.save  
       render :show
     end
-  end
-
-  private
-
-  def cart_params
-    params.require(:cart).permit(:items => [])
   end
 end

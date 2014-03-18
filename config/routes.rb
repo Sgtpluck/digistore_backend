@@ -9,6 +9,7 @@ DigiApi::Application.routes.draw do
     get '/orders', to: "orders#index"
     get '/order/:id', to: "orders#show"
     post '/carts', to: "carts#create"
+    post '/items', to: "items#create"
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
