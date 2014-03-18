@@ -1,13 +1,14 @@
 DigiApi::Application.routes.draw do
   defaults format: :json do
     get '/products', to: "products#index"
-    get 'product/:id', to: "products#show"
+    get '/product/:id', to: "products#show"
     get '/carts', to: "carts#index"
-    get 'cart/:id', to: "carts#show"
+    get '/cart/:id', to: "carts#show"
     get '/items', to: "items#index"
-    get 'item/:id', to: "items#show"
+    get '/item/:id', to: "items#show"
     get '/orders', to: "orders#index"
-    get 'order/:id', to: "orders#show"
+    get '/order/:id', to: "orders#show"
+    post '/carts', to: "carts#create"
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
