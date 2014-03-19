@@ -1,4 +1,6 @@
 class ItemsController < ApplicationController
+  attr_accessor :product, :cart
+
   def index
     @items = Item.all
   end
@@ -17,6 +19,6 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.require(:item).permit(:quantity, :product, :cart, :current_price)
+    params.require(:item).permit(:quantity, :product, :cart, :currentPrice)
   end
 end
