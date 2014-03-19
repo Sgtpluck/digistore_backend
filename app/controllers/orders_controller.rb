@@ -6,4 +6,12 @@ class OrdersController < ApplicationController
   def show
     @order = Order.find(params[:id])
   end
+
+  def create
+    @order= OrderForm.new(params[:order]).order
+    if @order.save
+      render :show
+    end
+  end
+  
 end
