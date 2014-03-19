@@ -1,5 +1,4 @@
 class ItemsController < ApplicationController
-  attr_accessor :product, :cart
 
   def index
     @items = Item.all
@@ -10,15 +9,10 @@ class ItemsController < ApplicationController
   end
 
   def create
-    @item = Item.new(item_params)
+    @item = ItemForm.new(params[:item]).item
     if @item.save
       render :show
     end
   end
 
-  private
-
-  def item_params
-    params.require(:item).permit(:quantity, :product, :cart, :currentPrice)
-  end
 end

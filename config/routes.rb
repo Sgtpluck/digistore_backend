@@ -1,7 +1,7 @@
 DigiApi::Application.routes.draw do
   defaults format: :json do
     get '/products', to: "products#index"
-    get '/product/:id', to: "products#show"
+    get '/products/:id', to: "products#show"
     get '/carts', to: "carts#index"
     get '/carts/:id', to: "carts#show"
     get '/items', to: "items#index"
