@@ -11,6 +11,7 @@ class ItemsController < ApplicationController
   def create
     @item = ItemForm.new(params[:item]).item
     if @item.save
+      puts @item.inspect
       render :show
     end
   end
