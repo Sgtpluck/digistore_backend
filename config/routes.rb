@@ -14,6 +14,7 @@ DigiApi::Application.routes.draw do
     get '/item/:id',        to: "items#show"
     post '/items',          to: "items#create"
     delete '/items/:id',    to: "items#destroy"
+    put '/items/:id',       to: "items#update"
 
     get '/orders',          to: "orders#index"
     get '/order/:id',       to: "orders#show"

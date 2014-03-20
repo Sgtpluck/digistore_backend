@@ -11,8 +11,6 @@ class ItemForm
     Item.new(permitted_values)
   end
 
-  private
-
   def permitted_values
     @item_hash.permit(:quantity, :product_id, :cart_id, :current_price)
   end
