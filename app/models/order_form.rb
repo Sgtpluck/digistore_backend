@@ -4,6 +4,8 @@ class OrderForm
    order_hash[:cart_id]        = order_hash.delete(:cart)
    order_hash[:exp_date]       = order_hash.delete(:expDate)
    order_hash[:customer_name]  = order_hash.delete(:customerName)
+   order_hash[:creditcard]     = order_hash[:creditcard].reverse.slice(0..3).reverse
+   order_hash[:status]         = "paid"
    @order_hash = order_hash
   end
 
@@ -14,7 +16,7 @@ class OrderForm
   private
 
   def permitted_values
-    @order_hash.permit(:customer_name, :email, :status, :cvv, :zip, :exp_date, :cart_id)
+    @order_hash.permit(:customer_name, :email, :status, :cvv, :zip, :exp_date, :cart_id, :creditcard)
   end
 end
 

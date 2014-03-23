@@ -13,5 +13,12 @@ class OrdersController < ApplicationController
       render :show
     end
   end
+
+  def update
+    @order = Order.find(params[:id])
+    @order.update(status: params[:order][:status])
+    @order.save
+    render :index
+  end
   
 end
