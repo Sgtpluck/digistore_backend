@@ -17,3 +17,4 @@ class OrderForm
     @order_hash.permit(:customer_name, :email, :status, :cvv, :zip, :exp_date, :cart_id)
   end
 end
+

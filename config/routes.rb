@@ -4,7 +4,7 @@ DigiApi::Application.routes.draw do
     get '/products/:id',    to: "products#show"
     post '/products',       to: "products#create"
     delete '/products/:id', to: "products#destroy"
-    put '/products/:id',  to: "products#update"
+    put '/products/:id',    to: "products#update"
 
     get '/carts',           to: "carts#index"
     get '/carts/:id',       to: "carts#show"
